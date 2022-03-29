@@ -6,6 +6,6 @@ $conn = mysqli_connect(
   'root',
   'password123',
   'php_mysql_crud'
-) or die(mysqli_erro($mysqli));
+) or die(mysqli_error($mysqli));
 
 ?>

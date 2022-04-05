@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+
+  mysql:
+    image: liliiakoloda/php-mysql-crud-db:v1
+    container_name: php_mysql_crud-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=password123
+      - MYSQL_DATABASE=php_mysql_crud
+    restart: always
+    ports:
+      - 3306:3306
+    networks:
+      - app
+
+  php:
+    container_name: php-mysql-crud
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html/
+    ports:
+      - 80:80
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password123
+      - MYSQL_DB=php-mysql-crud
+    networks:
+      - app
+    depends_on:
+      - mysql
+networks:
+  app:
+    driver: bridge
+
+ 
+
+

@@ -2,7 +2,7 @@
 session_start();
 
 $conn = mysqli_connect(
-  '172.31.15.42',
+  'lm1kclu3tv97i2c.c9ujfobq2flt.us-east-1.rds.amazonaws.com',
   'admin',
   'Qwertyui',
   'php_mysql_crud'

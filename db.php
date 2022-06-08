@@ -2,7 +2,7 @@
 session_start();
 
 $conn = mysqli_connect(
-  'localhosat',
+  'localhost',
   'demo',
   'demo',
   'demo'

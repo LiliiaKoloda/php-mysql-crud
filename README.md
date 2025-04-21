@@ -11,7 +11,6 @@ This is a simple open-source PHP-MySQL CRUD application that I extended in addit
 ## Technologies Used
 1. PHP
 2. MySQL
-3. Apache
 4. Docker
 5. Docker Compose
 6. Jenkins
